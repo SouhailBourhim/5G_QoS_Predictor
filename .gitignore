@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+pip-wheel-metadata/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data files (large files - don't commit to git)
+data/raw/5g_nidd/*.csv
+data/raw/5g_nidd/*.parquet
+data/raw/generated/*.parquet
+data/processed/*.parquet
+data/splits/*.parquet
+
+# But keep directory structure
+!data/raw/.gitkeep
+!data/raw/5g_nidd/.gitkeep
+!data/raw/generated/.gitkeep
+!data/processed/.gitkeep
+!data/splits/.gitkeep
+
+# Model artifacts (large files)
+models/*.joblib
+models/*.pkl
+models/*.pt
+models/*.onnx
+!models/.gitkeep
+
+# Environment
+.env
+.env.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# MyPy
+.mypy_cache/
+
+# Reports (generated)
+reports/figures/*.png
+reports/figures/*.pdf
+reports/tables/*.csv
