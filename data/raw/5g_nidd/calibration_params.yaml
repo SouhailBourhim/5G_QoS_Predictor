@@ -1,0 +1,87 @@
+active_users:
+  distribution: normal
+  fit_params: {}
+  max: 30.0
+  mean: 13.0
+  median: 14.0
+  min: 0.0
+  range:
+  - 0.0
+  - 30.0
+  std: 7.79277054244976
+dl_throughput:
+  distribution: lognormal
+  fit_params:
+    loc: 0.0
+    s: 3.6215862470889024
+    scale: 0.015018417687234656
+  max: 1304.0
+  mean: 2.4132151796724934
+  median: 0.015651046390588903
+  min: 0.0
+  range:
+  - 0.0
+  - 1304.0
+  std: 44.74324662212001
+jitter:
+  distribution: exponential
+  max: 0.0
+  mean: 0.0
+  median: 0.0
+  min: 0.0
+  range:
+  - 0.0
+  - 0.0
+  std: 0.0
+latency:
+  distribution: gamma
+  fit_params:
+    a: 0.06718062237830252
+    loc: 0.0
+    scale: 0.005627984316235108
+  max: 0.200041
+  mean: 0.00037809050000000004
+  median: 0.0
+  min: 0.0
+  range:
+  - 0.0
+  - 0.200041
+  std: 0.004810842126654033
+packet_loss:
+  distribution: beta
+  fit_params:
+    a: 0.09775470417280722
+    b: 21.59710998142769
+  max: 62.5
+  mean: 0.34798413118
+  median: 0.0
+  min: 0.0
+  range:
+  - 0.0
+  - 62.5
+  std: 3.918820305010805
+reliability:
+  distribution: normal
+  fit_params: {}
+  max: 100.0
+  mean: 99.65201586881999
+  median: 100.0
+  min: 37.5
+  range:
+  - 37.5
+  - 100.0
+  std: 3.9188203050108044
+ul_throughput:
+  distribution: lognormal
+  fit_params:
+    loc: 0.0
+    s: 2.011048210604106
+    scale: 0.07736138574454507
+  max: 944.0
+  mean: 2.4798133444583503
+  median: 0.12024316729820675
+  min: 0.0
+  range:
+  - 0.0
+  - 944.0
+  std: 42.58409329854754

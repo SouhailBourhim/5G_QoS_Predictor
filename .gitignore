@@ -20,6 +20,8 @@ build/
 # Data files (large files - don't commit to git)
 data/raw/5g_nidd/*.csv
 data/raw/5g_nidd/*.parquet
+data/raw/5g_nidd/*.zip
+data/raw/5g_nidd/*/
 data/raw/generated/*.parquet
 data/processed/*.parquet
 data/splits/*.parquet
