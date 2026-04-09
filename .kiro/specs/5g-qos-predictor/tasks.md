@@ -87,23 +87,23 @@ Implement the end-to-end ML pipeline in sequential phases: EDA/calibration → s
   - Show `violation_in_30min` positive rate per split as a bar chart to confirm no leakage drift
   - Display a KPI time-series with vertical lines marking the split boundaries
 
-- [ ] 5. Checkpoint — verify data pipeline end-to-end
+- [x] 5. Checkpoint — verify data pipeline end-to-end
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 6. XGBoost SLA violation classifier
-  - [ ] 6.1 Implement `src/models/classifier.py`
+- [x] 6. XGBoost SLA violation classifier
+  - [x] 6.1 Implement `src/models/classifier.py`
     - Implement `train_classifier`: XGBoost with `scale_pos_weight`, `eval_metric='aucpr'`, `early_stopping_rounds=20`; hyperparameters as specified in design
     - Implement `find_optimal_threshold`: highest-precision threshold achieving recall ≥ 0.90 on val set; fallback to 0.5
     - Implement `save_classifier` / `load_classifier`: save model as `{slice_type}_clf_{horizon}min.json` + `.threshold` file
     - Train 9 models total (3 slices × 3 horizons: 15min, 30min, 60min)
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.5, 6.6, 6.7, 12.2_
 
-  - [ ]* 6.2 Write unit tests for the classifier
+  - [x]* 6.2 Write unit tests for the classifier
     - Test that `find_optimal_threshold` returns a value in [0, 1]
     - Test that `find_optimal_threshold` falls back to 0.5 when no threshold meets the recall constraint
     - _Requirements: 6.4, 6.5_
 
-- [ ]* 6.N Notebook — Classifier training and evaluation (`notebooks/05_classifier.ipynb`)
+- [x]* 6.N Notebook — Classifier training and evaluation (`notebooks/05_classifier.ipynb`)
   - Train the eMBB 30-min classifier and plot the AUC-PR and AUC-ROC curves
   - Plot the precision-recall trade-off curve with the selected threshold marked
   - Display the confusion matrix for each slice × horizon combination
