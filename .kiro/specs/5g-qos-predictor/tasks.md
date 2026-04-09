@@ -71,17 +71,17 @@ Implement the end-to-end ML pipeline in sequential phases: EDA/calibration → s
   - Display SLA proximity features: `sla_margin` and `time_to_breach` over a 24-hour window
   - Render a feature correlation heatmap (top-50 features by variance)
 
-- [ ] 4. Temporal data splitting
+- [x] 4. Temporal data splitting
   - Implement `temporal_split` in `src/data/generator.py` (or a dedicated `src/data/splitter.py`)
   - Sort by timestamp, cut at day 60 (train) and day 75 (val), remainder is test
   - Assert `train.timestamp.max() < val.timestamp.min()` and `val.timestamp.max() < test.timestamp.min()`
   - Save `{slice_type}_{train|val|test}.parquet` to `data/splits/`
   - _Requirements: 4.1, 4.2, 4.3, 4.4, 4.5_
 
-  - [ ]* 4.1 Write unit test for temporal split integrity
+  - [x]* 4.1 Write unit test for temporal split integrity
     - Test that no timestamp overlap exists between any two splits — _Requirements: 4.3, 4.4, 13.1_
 
-- [ ]* 4.N Notebook — Temporal split visualization (`notebooks/04_temporal_split.ipynb`)
+- [x]* 4.N Notebook — Temporal split visualization (`notebooks/04_temporal_split.ipynb`)
   - Call `temporal_split()` and print the timestamp ranges and row counts for each split
   - Plot a timeline bar showing train / val / test boundaries for each slice
   - Show `violation_in_30min` positive rate per split as a bar chart to confirm no leakage drift
