@@ -45,8 +45,8 @@ Implement the end-to-end ML pipeline in sequential phases: EDA/calibration → s
   - Show `any_breach` positive rate and `violation_in_{15,30,60}min` label distributions as bar charts
   - Visualize cross-slice PRB coupling: stacked PRB area chart with the 90% threshold line
 
-- [ ] 3. Feature engineering pipeline
-  - [ ] 3.1 Implement `src/features/engineering.py` with all 8 feature categories
+- [x] 3. Feature engineering pipeline
+  - [x] 3.1 Implement `src/features/engineering.py` with all 8 feature categories
     - Implement `add_lag_features`: lags [1,3,6,12,24,36,72,144] for each KPI → 56 features
     - Implement `add_rolling_stats`: windows [6,12,36,72,144,288] × {mean, std, range, cv} → 84 features
     - Implement `add_ewma_features`: spans [6,12,36] → 21 features
@@ -59,12 +59,12 @@ Implement the end-to-end ML pipeline in sequential phases: EDA/calibration → s
     - All operations must use only `shift()` and `rolling(min_periods=1)` — no future-index `iloc`
     - _Requirements: 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 3.10, 3.11_
 
-  - [ ]* 3.2 Write unit tests for the feature pipeline
+  - [x]* 3.2 Write unit tests for the feature pipeline
     - Test that all lag feature column names have lag step ≥ 1 — _Requirements: 3.12, 13.3_
     - Test that `sla_margin` is positive for a KPI safely above its minimum threshold — _Requirements: 13.4_
     - Test that `build_features` produces at least 200 columns for a valid input — _Requirements: 3.10, 13.5_
 
-- [ ]* 3.N Notebook — Feature engineering visualization (`notebooks/03_feature_engineering.ipynb`)
+- [x]* 3.N Notebook — Feature engineering visualization (`notebooks/03_feature_engineering.ipynb`)
   - Call `build_features()` on the eMBB slice and display the feature matrix shape and column list
   - Plot a sample of lag features vs. the raw KPI to confirm correct shift direction
   - Show rolling-mean and EWMA smoothing overlaid on the raw latency series
