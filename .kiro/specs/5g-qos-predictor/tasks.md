@@ -109,14 +109,14 @@ Implement the end-to-end ML pipeline in sequential phases: EDA/calibration → s
   - Display the confusion matrix for each slice × horizon combination
   - Show feature importance (top-20 XGBoost gain scores) as a horizontal bar chart
 
-- [ ] 7. XGBoost KPI forecaster
+- [x] 7. XGBoost KPI forecaster
   - Implement `src/models/forecaster.py`
   - Implement `train_forecaster`: XGBoost regressor, target = `df[kpi].shift(-h)`, early stopping on RMSE
   - Implement `evaluate_forecaster`: returns `{mae, rmse, mape}` on test split
   - Train up to 63 models (3 slices × 7 KPIs × 3 horizons); save artifacts to `models/`
   - _Requirements: 5.1, 5.2, 5.3, 5.4, 5.5_
 
-- [ ]* 7.N Notebook — Forecaster evaluation (`notebooks/06_forecaster.ipynb`)
+- [x]* 7.N Notebook — Forecaster evaluation (`notebooks/06_forecaster.ipynb`)
   - Plot actual vs. predicted KPI values for eMBB dl_throughput at all three horizons
   - Display a MAE / RMSE / MAPE summary table across all slice × KPI × horizon combinations
   - Show residual distribution histograms per horizon
