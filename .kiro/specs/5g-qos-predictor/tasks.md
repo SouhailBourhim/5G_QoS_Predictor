@@ -133,8 +133,8 @@ Implement the end-to-end ML pipeline in sequential phases: EDA/calibration → s
 - [x] 9. Checkpoint — verify all models train and save correctly
   - Ensure all tests pass, ask the user if questions arise.
 
-- [ ] 10. Evaluation framework
-  - [ ] 10.1 Implement `src/evaluation/evaluate.py` with all 8 pillars
+- [x] 10. Evaluation framework
+  - [x] 10.1 Implement `src/evaluation/evaluate.py` with all 8 pillars
     - Pillar 1 `verify_temporal_integrity`: assert no split overlap and violation rate in (0.01, 0.15) per split
     - Pillar 2 `compute_classification_metrics`: precision, recall, F1, AUC-ROC, AUC-PR, confusion matrix
     - Pillar 3 `compute_per_slice_metrics`: run Pillar 2 metrics per slice type
@@ -146,12 +146,12 @@ Implement the end-to-end ML pipeline in sequential phases: EDA/calibration → s
     - Implement `run_evaluation` orchestrator; Pillar 1 must pass before any other pillar runs
     - _Requirements: 8.1, 8.2, 8.3, 8.4, 8.5, 8.6, 8.7, 8.8, 8.9, 4.6, 12.5, 12.6_
 
-  - [ ]* 10.2 Write unit tests for the evaluator
+  - [x]* 10.2 Write unit tests for the evaluator
     - Test that `verify_temporal_integrity` raises an assertion error when splits overlap
     - Test that `compute_baseline_comparison` produces a result for each slice type
     - _Requirements: 8.1, 8.8_
 
-- [ ]* 10.N Notebook — Full evaluation report (`notebooks/07_evaluation.ipynb`)
+- [x]* 10.N Notebook — Full evaluation report (`notebooks/07_evaluation.ipynb`)
   - Run `run_evaluation()` for all 9 classifier models and display the nested results dict
   - Render per-slice precision / recall / F1 / AUC-PR as a grouped bar chart
   - Plot per-event-type recall as a horizontal bar chart
