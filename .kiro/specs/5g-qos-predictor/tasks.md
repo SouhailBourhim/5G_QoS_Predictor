@@ -176,7 +176,7 @@ Implement the end-to-end ML pipeline in sequential phases: EDA/calibration → s
     - Test that `health_status` is "healthy" / "warning" / "critical" based on 30min probability thresholds
     - _Requirements: 9.2, 9.4, 9.8_
 
-- [ ] 12. Streamlit dashboard
+- [x] 12. Streamlit dashboard
   - Implement `src/deployment/dashboard.py` with 6 pages
   - Page 1 (Slice Overview): risk gauges (green <30%, yellow 30–70%, red >70%), KPI delta indicators, side-by-side 3-slice comparison
   - Page 2 (Real-time Monitoring): KPI time-series plots with SLA threshold lines overlaid
