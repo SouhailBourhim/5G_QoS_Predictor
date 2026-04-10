@@ -122,7 +122,7 @@ Implement the end-to-end ML pipeline in sequential phases: EDA/calibration → s
   - Show residual distribution histograms per horizon
   - Overlay forecast confidence bands on a 48-hour KPI time-series window
 
-- [ ] 8. Optional LSTM classifier
+- [x] 8. Optional LSTM classifier
   - Implement `src/models/lstm.py`
   - Implement `SLAViolationLSTM`: 2-layer LSTM (hidden=128, dropout=0.2) → FC(128→64→32→1) → Sigmoid
   - Implement `SLASequenceDataset`: sliding window with seq_len=24, stride=1, no shuffling
