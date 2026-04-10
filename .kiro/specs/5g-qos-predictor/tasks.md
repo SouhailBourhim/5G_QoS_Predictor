@@ -160,8 +160,8 @@ Implement the end-to-end ML pipeline in sequential phases: EDA/calibration → s
   - Render the SHAP global summary bar plot inline
   - Show XGBoost vs. static-threshold baseline comparison table
 
-- [ ] 11. FastAPI REST API
-  - [ ] 11.1 Implement `src/deployment/api.py`
+- [x] 11. FastAPI REST API
+  - [x] 11.1 Implement `src/deployment/api.py`
     - Define `KPIHistory` and `PredictionResponse` Pydantic models
     - Implement `POST /predict`: validate ≥12 timesteps (HTTP 422 otherwise), build feature vector, run all 3 horizon classifiers, run forecasters, compute top-5 SHAP features, generate recommendations, derive health_status
     - Implement `GET /health/{slice_type}`: return health status; HTTP 404 for unknown slice_type
@@ -170,7 +170,7 @@ Implement the end-to-end ML pipeline in sequential phases: EDA/calibration → s
     - Implement recommendation engine mapping SHAP features to predefined recommendation strings
     - _Requirements: 9.1, 9.2, 9.3, 9.4, 9.5, 9.6, 9.7, 9.8_
 
-  - [ ]* 11.2 Write unit tests for the API
+  - [x]* 11.2 Write unit tests for the API
     - Test that `/predict` with fewer than 12 timesteps returns HTTP 422
     - Test that `/predict` with an unknown slice_type returns HTTP 404
     - Test that `health_status` is "healthy" / "warning" / "critical" based on 30min probability thresholds
