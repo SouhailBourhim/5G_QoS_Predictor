@@ -130,7 +130,7 @@ Implement the end-to-end ML pipeline in sequential phases: EDA/calibration → s
   - Save checkpoint to `models/lstm_{slice_type}_{horizon}min.pt`
   - _Requirements: 7.1, 7.2, 7.3, 7.4_
 
-- [ ] 9. Checkpoint — verify all models train and save correctly
+- [x] 9. Checkpoint — verify all models train and save correctly
   - Ensure all tests pass, ask the user if questions arise.
 
 - [ ] 10. Evaluation framework
